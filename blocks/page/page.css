@@ -1,0 +1,24 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vw / (1000 / 824));
+  font-family: Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1017px){
+  .page {
+    width: 1000px;
+    height: 824px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .page {
+    width: 320px;
+    height: calc(320px / (1000 / 824));
+  }
+}

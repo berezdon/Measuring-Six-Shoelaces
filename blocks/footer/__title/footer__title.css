@@ -1,0 +1,26 @@
+.footer__title{
+  width: calc(100vw / (1000 / 370));
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: calc(100vw / (1000 / 24));
+  line-height: 1.2;
+  margin: calc(100vw / (1000 / 10)) 0;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1017px){
+  .footer__title {
+    width: 370px;
+    font-size: 24px;
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .footer__title {
+    width: calc(320px / (1000 / 370));
+    font-size: calc(320px / (1000 / 24));
+    margin: calc(320px / (1000 / 10)) 0;
+  }
+}

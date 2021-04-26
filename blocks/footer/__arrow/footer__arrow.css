@@ -1,0 +1,19 @@
+.footer__arrow {
+  background-image: url("../../../images/arrow_bottom.png");
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0 calc(100vw / (1000 / 16));
+}
+
+@media screen and (min-width: 1017px){
+  .footer__arrow {
+    padding: 0 16px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .footer__arrow {
+    padding: 0 calc(320px / (1000 / 16));
+  }
+}

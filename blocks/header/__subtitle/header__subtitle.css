@@ -1,0 +1,22 @@
+.header__subtitle {
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(100vw / (1000 / 24));
+  line-height: 1.2;
+  margin: calc(100vw / (1000 / 10)) 0 calc(100vw / (1000 / 20));
+}
+
+@media screen and (min-width: 1017px){
+  .header__subtitle {
+    font-size: 24px;
+    margin: 10px 0 20px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .header__subtitle {
+    font-size: calc(320px / (1000 / 24));
+    margin: calc(320px / (1000 / 10)) 0 calc(320px / (1000 / 20));
+  }
+}

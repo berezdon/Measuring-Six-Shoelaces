@@ -1,0 +1,18 @@
+.canvas {
+  width: calc(100vw / (1000 / 650));
+  height: calc(100vw / (1000 / 500));
+}
+
+@media screen and (min-width: 1017px){
+  .canvas {
+    width: 650px;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .canvas {
+    width: calc(320px / (1000 / 650));
+    height: calc(320px / (1000 / 500));
+  }
+}

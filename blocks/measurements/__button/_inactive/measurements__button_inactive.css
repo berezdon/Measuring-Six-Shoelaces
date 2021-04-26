@@ -1,0 +1,23 @@
+.measurements__button_inactive {
+  border: calc(100vw / (1000 / 1)) solid rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.15);
+  cursor: auto;
+}
+
+.measurements__button_inactive:hover {
+  opacity: 1;
+}
+
+@media screen and (min-width: 1017px){
+  .measurements__button_inactive {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media screen and (max-width: 320px){
+  .measurements__button_inactive {
+    border: calc(320px / (1000 / 1)) solid rgba(0, 0, 0, 0.15);
+  }
+}

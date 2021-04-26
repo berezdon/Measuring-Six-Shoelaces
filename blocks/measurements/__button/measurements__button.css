@@ -1,0 +1,43 @@
+.measurements__button {
+  width: 100%;
+  background-color: #000;
+  border: 0;
+  color: #fff;
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(100vw / (1000 / 18));
+  line-height: 1.2;
+  transition: opacity 0.2s linear;
+  cursor: pointer;
+  height: calc(100vw / (1000 / 50));
+  border-radius: calc(100vw / (1000 / 10));
+}
+
+.measurements__button:hover {
+  opacity: 0.8;
+}
+
+.measurements__button:focus {
+  outline: none;
+}
+
+.measurements__button:active {
+  outline: none;
+}
+
+@media screen and (min-width: 1017px){
+  .measurements__button-button {
+    font-size: 18px;
+    height: 50px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .measurements__button {
+    font-size: calc(320px / (1000 / 18));
+    height: calc(320px / (1000 / 50));
+    border-radius: calc(320px / (1000 / 10));
+  }
+}

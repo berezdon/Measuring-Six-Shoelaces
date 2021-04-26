@@ -1,0 +1,17 @@
+.footer__information {
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc(100vw / (1000 / 10)) 0;
+}
+
+@media screen and (min-width: 1017px){
+  .footer__information {
+    gap: 10px 0;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .footer__information {
+    gap: calc(320px / (1000 / 10)) 0;
+  }
+}

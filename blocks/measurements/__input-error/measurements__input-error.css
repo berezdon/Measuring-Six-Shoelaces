@@ -1,0 +1,31 @@
+.measurements__input-error {
+  height: calc(100vw / (1000 / 36));
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(100vw / (1000 / 15));
+  line-height: 1.2;
+  color: #FF0000;
+  margin-top: calc(100vw / (1000 / 5));
+  width: 100%;
+  border: none;
+  resize: none;
+  opacity: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 1017px){
+  .measurements__input-error {
+    height: 36px;
+    font-size: 15px;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .measurements__input-error {
+    height: calc(320px / (1000 / 36));
+    font-size: calc(320px / (1000 / 15));
+    margin-top: calc(320px / (1000 / 5));
+  }
+}

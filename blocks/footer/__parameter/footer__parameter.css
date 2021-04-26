@@ -1,0 +1,22 @@
+.footer__parameter {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(100vw / (1000 / 20));
+  line-height: 1.2;
+  margin: 0;
+}
+
+@media screen and (min-width: 1017px){
+  .footer__parameter {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .footer__parameter {
+    font-size: calc(320px / (1000 / 20));
+  }
+}

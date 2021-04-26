@@ -1,0 +1,21 @@
+.measurements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: calc(100vw / (1000 / 340));
+  margin-right: calc(100vw / (1000 / 10));
+}
+
+@media screen and (min-width: 1017px){
+  .measurements {
+    width: 340px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .measurements {
+    width: calc(320px / (1000 / 340));
+    margin-right: calc(320px / (1000 / 10));
+  }
+}

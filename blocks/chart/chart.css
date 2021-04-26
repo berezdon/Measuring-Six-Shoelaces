@@ -1,0 +1,15 @@
+.chart {
+  width: calc(100vw / (1000 / 650));
+}
+
+@media screen and (min-width: 1017px){
+  .chart {
+    width: 650px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .chart {
+    width: calc(320px / (1000 / 650));
+  }
+}
