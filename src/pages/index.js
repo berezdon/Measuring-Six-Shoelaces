@@ -1,3 +1,4 @@
+import './index.css';
 import getMaxOfArray from "../components/maximum.js";
 import geMinOfArray from "../components/minimum.js";
 import step from "../components/step.js";
