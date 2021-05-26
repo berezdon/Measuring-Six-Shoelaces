@@ -1,22 +1,24 @@
 .measurements__label {
+  display: block;
+  text-align: center;
   font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: calc(100vw / (1000 / 20));
   line-height: 1.2;
-  margin-right: calc(100vw / (1000 / 95));
+  margin-bottom: calc(100vw / (1000 / 5));
 }
 
 @media screen and (min-width: 1017px){
   .measurements__label {
     font-size: 20px;
-    margin-right: 95px;
+    margin-bottom: 5px;
   }
 }
 
 @media screen and (max-width: 320px){
   .measurements__label {
     font-size: calc(320px / (1000 / 20));
-    margin-right: calc(320px / (1000 / 95));
+    margin-bottom: calc(320px / (1000 / 5));
   }
 }

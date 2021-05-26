@@ -1,0 +1,15 @@
+.measurements__input_quantity {
+  width: calc(100vw / (1000 / 80));
+}
+
+@media screen and (min-width: 1017px){
+  .measurements__input_quantity {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .measurements__input_quantity {
+    width: calc(320px / (1000 / 80));
+  }
+}

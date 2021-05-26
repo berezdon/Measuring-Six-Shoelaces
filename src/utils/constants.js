@@ -1,6 +1,6 @@
 const footerTitle = document.querySelector('.footer__title');
 const footerInformation = document.querySelector('.footer__information');
-const measurementsInput = document.querySelectorAll('.input');
+const measurementsInput = document.querySelector('.input');
 const numberOfIntervals = document.querySelector('.input_quantity');
 const measurementsForm = document.querySelector('.measurements__form');
 const stepValue = document.querySelector('.step');

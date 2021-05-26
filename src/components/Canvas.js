@@ -13,7 +13,6 @@ export default class Canvas {
     this._intervalY = 0;
     this._startValueY = 0;
     this._arrayData = [];
-    this._objLength = 0;
   }
 
   _drawAxes() {
@@ -64,12 +63,15 @@ export default class Canvas {
   }
 
   _drawChart(objChart) {
+    console.log(objChart);
+    console.log(this._intervalsX);
+    console.log(this._arrayOfIntervals);
     this._ctx.beginPath();
     this._ctx.lineWidth = 2;
     this._ctx.fillStyle = "#953735";
     this._ctx.textAlign = "center"; // выровнять текст по середине от точки рисования
     this._ctx.font = "18px  Roboto, Arial, sans-serif";
-    const height = (this._height - 100 - this._intervalY) / (this._startValueY * (this._intervalsY - 1)) * (1 / 6);
+    const height = (this._height - 100 - this._intervalY) / (this._startValueY * (this._intervalsY - 1)) * (1 / this._arrayData.length);
     for (let i=1; i<=this._intervalsX - 1; i++){
       if (Object.keys(objChart).includes(String(this._arrayOfIntervals[i]))) {
         const scale = Number(objChart[this._arrayOfIntervals[i]]);
@@ -105,30 +107,24 @@ export default class Canvas {
         }
       })
     }
-    this._objLength = Object.keys(objChart).length;
-    if (this._objLength === 6) {
-      this._intervalsY = 10;
+    //Находим, максимальное количество повторяющихся эл-ов в массиве
+    const maxQuantityIdentical = Math.max.apply(null, Object.values(objChart));
+    //Получим количество введенных данных
+    const dataLength = this._arrayData.length;
+    // Получим частоту, которая нужна для рисования оси Y и соответственно для рисования Прямоугольников диаграммы
+    const frequency = maxQuantityIdentical/dataLength
+
+    if (frequency < 0.2) {
       this._startValueY = 0.02;
+      this._intervalsY = Math.floor(frequency/0.02) + 2
     }
-    if (this._objLength === 5) {
-      this._intervalsY = 8;
+    else if (frequency < 0.5) {
       this._startValueY = 0.05;
+      this._intervalsY = Math.floor(frequency/0.05) + 2
     }
-    if (this._objLength === 4) {
-      this._intervalsY = 7;
+    else if (frequency >= 0.5) {
       this._startValueY = 0.1;
-    }
-    if (this._objLength === 3) {
-      this._intervalsY = 8;
-      this._startValueY = 0.1;
-    }
-    if (this._objLength === 2) {
-      this._intervalsY = 10;
-      this._startValueY = 0.1;
-    }
-    if (this._objLength === 0) {
-      this._intervalsY = 11;
-      this._startValueY = 0.1;
+      this._intervalsY = Math.floor(frequency/0.1) + 2
     }
 
     this._intervalY = (this._height - 100) / this._intervalsY;

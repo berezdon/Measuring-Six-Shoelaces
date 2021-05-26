@@ -1,5 +1,5 @@
 .measurements__input {
-  width: calc(100vw / (1000 / 80));
+  width: calc(100vw / (1000 / 332));
   font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -19,7 +19,7 @@
 
 @media screen and (min-width: 1017px){
   .measurements__input {
-    width: 80px;
+    width: 332px;
     font-size: 20px;
     border-radius: 5px;
     border: 2px solid rgba(0, 0, 0, 0.2);
@@ -28,7 +28,7 @@
 
 @media screen and (max-width: 320px){
   .measurements__input {
-    width: calc(320px / (1000 / 80));
+    width: calc(320px / (1000 / 332));
     font-size: calc(320px / (1000 / 20));
     border-radius: calc(320px / (1000 / 5));
     border: calc(320px / (1000 / 5)) solid rgba(0, 0, 0, 0.2);

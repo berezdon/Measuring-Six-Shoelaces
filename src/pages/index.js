@@ -37,8 +37,9 @@ function clickOnFooterTitle() {
 function submitForm(evt) {
   evt.preventDefault();
   const measurementsValue = [];
-  measurementsInput.forEach((measurement) => {
-    measurementsValue.push(Number(measurement.value));
+  const arrayValue = measurementsInput.value.split(/\D/);
+  arrayValue.forEach((item) => {
+    if (Number(item)) measurementsValue.push(Number(item));
   });
   const getMaximum = getMaxOfArray(measurementsValue);
   const getMinimum = geMinOfArray(measurementsValue);
